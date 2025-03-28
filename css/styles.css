@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: white;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #35424a;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: white;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    left: 0;
+    top: -5em;
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.hero-hello {
+    border-radius: 10px;
+    font-size: 10em;
+
+    /* Make font size responsive */
+    @media (max-width: 480px) {
+        font-size: 4em;
+    }
+}
+
+.hero-highlight {
+    color: #392a47;
+    font-weight: 600;
+
+    /* Make font size responsive */
+    @media (max-width: 480px) {
+        font-size: 0.8em;
+    }
+}
+
+.hero-myname {
+    color: #F2F9FA;
+    font-size: 4em;
+    margin-top: -23px;
+    padding-left: 9px;
+
+    /* Make font size responsive */
+    @media (max-width: 768px) {
+        font-size: 2.5em;
+        padding-top: 15px;
+        padding-left: 0;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 2em;
+    }
+}
+.hero-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #F2F9FA;
+    padding: 40px;
+    z-index: 2;
+    margin-top: 60px; /* Adjust to position it right under the nav bar */
+    width: 100%; /* Ensure it spans the full width */
+
+    /* Make it responsive */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 20px;
+        margin-top: 50px;
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 10px;
+        margin-top: 40px;
+        font-size: 0.8em; /* Further adjust font size for very small screens */
+    }
+}
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(65, 131, 221, 0.5);
+    padding: 10px;
+    /* display: flex; */
+    justify-content: center;
+    z-index: 1000;
+}
+.sticky-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+.sticky-nav li {
+    display: inline;
+}
+.sticky-nav a img {
+    width: 24px;
+    height: 24px;
+}
+.nav-item {
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+    font-size: 1.45em;
+}
+.overlay-box {
+    position: absolute;
+    color: #392a47;
+    padding: 45px;
+    width: 500px;
+    top: 59%;
+    left: 16%;
+    transform: translate(-36%, -50%);
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background-color: #d3d3d3;
+    font-size: 1.5em;
+    padding-left: 100px;
+}
+
+@media (max-width: 768px) {
+    .overlay-box {
+        width: 80%;
+        padding: 30px;
+        font-size: 1.2em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 20px;
+        top: 65%; /* Adjusted to avoid overlapping with title */
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-box {
+        width: 90%;
+        padding: 20px;
+        font-size: 1em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 10px;
+        top: 70%; /* Further adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-box {
+        width: 90%;
+        padding: 20px;
+        font-size: 1em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 10px;
+    }
+}
+
