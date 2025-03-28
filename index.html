@@ -164,6 +164,84 @@
             </p>
         </div>
     </section>
+
+    <section id="carousel" style="background-color: #f4f4f4; padding: 20px; position: relative;">
+        <h2 style="text-align: center;">FEATURED ARTICLES</h2>
+        <div class="carousel-container" style="position: relative; overflow: hidden; width: 100%; max-width: 1000px; margin: 0 auto;">
+            <div class="carousel-track" style="display: flex; transition: transform 0.5s ease-in-out;">
+                <a href="https://www.solevoice.com/article" target="_blank" style="position: relative; flex: 0 0 auto; width: 300px; height: 300px; margin: 0 10px;">
+                    <img src="assets/sole_voice.jpeg" alt="Sole Voice Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                    <div class="overlay">
+                        <p style="text-align: center; padding: 10px;">
+                            <em>"Sole Voice"</em> by Fatima Azfar <br> on LinkedIn <br><br>
+                            <em>"Being the sole voice in the room is an incredible opportunity and an exhausting responsibility..."</em>
+                            <br><br>
+                            <button style="background-color: #F9C80E; color: black; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">read more</button>
+                            </p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/pulse/my-illinois-tech-story-fatima-azfar/" target="_blank" style="position: relative; flex: 0 0 auto; width: 300px; height: 300px; margin: 0 10px;">
+                    <img src="assets/illinoistechstory.jpeg" alt="Illinois Tech Story" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                    <div class="overlay">
+                        <p style="text-align: center; padding: 10px;"><em>"My Illinois Tech Story"</em> by Fatima Azfar <br> on LinkedIn <br><br>
+                        <em>"Once I decided upon Computer Science ... with no idea about the general bias against women in tech, with no idea about the real life limits I should have had ... applied to several universities..."</em>
+                        <br><br>
+                        <button style="background-color: #F9C80E; color: black; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">read more</button>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://podcasts.apple.com/us/podcast/time-mangement-fake-it-til-you-make-it-and-imposter/id1505224287?i=1000504269441" target="_blank" style="position: relative; flex: 0 0 auto; width: 300px; height: 300px; margin: 0 10px;">
+                    <img src="assets/podcast.webp" alt="SWE Podcast" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                    <div class="overlay">
+                        <p style="text-align: center; padding: 10px;"><em>"Time Mangement, Fake it 'til You Make It, and Imposter Syndrome with Fatima Azfar"</em> hosted with Gufrana Baig @ Illinois Tech's Society for Women Engineers' podcast
+                        <br><br>
+                        <button style="background-color: #F9C80E; color: black; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">listen</button>
+                    </p>    
+                    </div>
+                </a>
+                <a href="https://islamichorizons.net/the-healing-power-of-doing-good/" target="_blank" style="position: relative; flex: 0 0 auto; width: 300px; height: 300px; margin: 0 10px;">
+                    <img src="assets/bloomarticle.jpg" alt="Bloom Article" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                    <div class="overlay">
+                        <p style="text-align: center; padding: 10px;"><em>"The Healing Power of Doing Good"</em> by Naazish Yarkhan @ Islamic Horizons <br><br> 
+                            <em>"It was wonderful to see the company welcoming the endeavors of their only hijabi employee striving to create a space for her community..."</em>
+                            <br><br>
+                            <button style="background-color: #F9C80E; color: black; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">read more</button>
+                        </p>
+                    </div>
+                </a>
+                <a href="https://www.iit.edu/sites/default/files/2019-11/uga_viewbook_2019-20.pdf" target="_blank" style="position: relative; flex: 0 0 auto; width: 300px; height: 300px; margin: 0 10px;">
+                    <img src="assets/acmw_grad.png" alt="Undergrad admissions 2019" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                    <div class="overlay">
+                        <p style="text-align: center; padding: 10px;">Find Fatima in Illinois Tech's Undergrad Admissions Magazine 2019</p>
+                    </div>
+                </a>
+            </div>
+            <button class="carousel-arrow" style="position: absolute; bottom: 10px; right: 10px; background-color: #F9C80E; color: black; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center;">&#9654;</button>
+        </div>
+    </section>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const arrow = document.querySelector('.carousel-arrow');
+        let currentIndex = 0;
+
+        arrow.addEventListener('click', () => {
+            currentIndex = (currentIndex+1) % 3; //only need 3 clicks to show the end
+            track.style.transform = `translateX(-${currentIndex * 320}px)`;
+        });
+
+        document.querySelectorAll('.carousel-container a').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.querySelector('.overlay').style.opacity = '1';
+            });
+            item.addEventListener('mouseout', () => {
+                item.querySelector('.overlay').style.opacity = '0';
+            });
+        });
+    </script>
+    
+  
+
     <section id="contact" style="display: none;">
         <h2>Contact Me</h2>
         <form id="contact-form">

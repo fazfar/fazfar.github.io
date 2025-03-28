@@ -18,3 +18,23 @@ function handleFormSubmit(event) {
 
 // Event listener for the contact form
 document.getElementById('contact-form').addEventListener('submit', handleFormSubmit);
+
+// const carouselContainer = document.querySelector('.carousel-container');
+// const prevButton = document.getElementById('carousel-prev');
+// const nextButton = document.getElementById('carousel-next');
+// let currentIndex = 0;
+
+// prevButton.addEventListener('click', () => {
+//     currentIndex = (currentIndex > 0) ? currentIndex - 1 : 4;
+//     carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+// });
+
+// nextButton.addEventListener('click', () => {
+//     currentIndex = (currentIndex < 4) ? currentIndex + 1 : 0;
+//     carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+// });
+
+// document.querySelectorAll('.carousel-item .overlay').forEach(overlay => {
+//     overlay.parentElement.addEventListener('mouseover', () => overlay.style.opacity = 1);
+//     overlay.parentElement.addEventListener('mouseout', () => overlay.style.opacity = 0);
+// });
