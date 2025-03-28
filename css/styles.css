@@ -8,8 +8,10 @@ body {
 header {
     background: white;
     color: #ffffff;
-    padding: 20px 0;
+    padding: 0px 0;
     text-align: center;
+    max-width: fit-content;
+    margin: 0 auto;
 }
 
 h1 {
@@ -49,8 +51,15 @@ footer {
     object-fit: cover;
     position: relative;
     left: 0;
-    top: -5em;
+    top: -3em;
     z-index: 1;
+}
+.right-nav{
+    margin-left: auto; padding-right: 20px; text-decoration: none;
+    color: inherit;
+    align-items: center;
+    display: flex;
+    font-size: 1.45em;
 }
 
 .hero-text {
