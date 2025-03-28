@@ -162,7 +162,7 @@ footer {
 }
 .overlay-box {
     position: absolute;
-    color: #392a47;
+    color: #392a47;;
     padding: 45px;
     width: 500px;
     top: 59%;
@@ -172,9 +172,10 @@ footer {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
-    background-color: #d3d3d3;
+    background-color: white;
     font-size: 1.5em;
     padding-left: 100px;
+    text-align: left; /* Align text to the left */
 }
 
 @media (max-width: 768px) {
@@ -212,3 +213,13 @@ footer {
     }
 }
 
+.contact-button{
+    background-color: #392a47;
+    color: white;
+    border: none;
+    margin: 17px 9px;
+    padding: 10px 22px;
+    font-size: 1.7em;
+    cursor: pointer;
+    border-radius: 25px;
+}
