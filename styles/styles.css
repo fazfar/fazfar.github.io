@@ -1,0 +1,420 @@
+/* Sticky top navigation bar */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* Span the width of the page */
+    background-color: #1e1f23;
+    /* Slightly darker grey */
+    color: white;
+    padding: 5px 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    /* Set flex direction to row */
+    justify-content: space-between;
+    /* Space items to opposite ends */
+    align-items: center;
+    /* Align items vertically */
+}
+
+.award {
+    margin: 0 7em;
+}
+
+.icon-name {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #D09AB0;
+    /* Light pink color */
+    padding: 0 1.5em;
+    font-style: italic;
+    letter-spacing: 0.2em;
+}
+
+.icon {
+    position: relative;
+    /* Enable positioning for overlay */
+    display: inline-block;
+    /* Ensure the element is visible */
+    overflow: hidden;
+    /* Prevent pseudo-element overflow */
+    border-radius: 50%;
+    /* Circle shape */
+    background-color: transparent;
+    /* Default background */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.icon-button {
+    width: 40px;
+    /* Match icon size */
+    height: 40px;
+    /* Match icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    /* Circle shape */
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.icon-button:hover {
+    background-color: #4d538972;
+    ;
+    /* Slightly lighter shade on hover */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.5em;
+}
+
+.carousel-arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #D09AB0;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #232429;
+    /* Dark background */
+    color: #d3d3d3;
+    /* Light grey font color */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center;  */
+    min-height: 100vh;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Profile container */
+.profile-container {
+    position: relative;
+    text-align: center;
+    margin-top: 8em;
+}
+
+/* Profile image */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 15px solid #4D5389;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+
+}
+
+
+/* Profile text */
+.profile-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hello-text {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #d3d3d3;
+}
+
+.name-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    position: relative;
+    top: -20px;
+    /* Slight overlap with the image */
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    background-color: #1e1f23;
+    /* Match header background */
+    color: #d3d3d3;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.profile-name {
+    color: #E1DED9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 0.14em;
+    padding-top: 0.8em;
+}
+
+.profile-subtitle {
+    color: #D09AB0;
+    /* Light pink color */
+    font-style: italic;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+.border {
+    width: 80%;
+    height: 0.5em;
+    background-color: #4D5389;
+    margin: 4em auto 6em auto;
+    border: none;
+}
+
+.email-button {
+    position: fixed;
+    /* Stick to the screen */
+    bottom: 20px;
+    /* Align to the bottom */
+    right: 20px;
+    /* Align to the right */
+    background-color: #D09AB0;
+    /* Match border color */
+    color: white;
+    font-size: 0.8rem;
+    /* Adjust font size to fit the smaller button */
+    font-family: Arial, sans-serif;
+    width: 40px;
+    /* Make the button circular */
+    height: 40px;
+    /* Make the button circular */
+    border: none;
+    border-radius: 50%;
+    /* Circle shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* Ensure it stays above other elements */
+}
+
+.technical-skills {
+    margin: 0 7em;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 1em;
+}
+
+.skill-item {
+    background-color: #4D5389;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.email-button:hover {
+    background-color: #e8becf;
+    /* Slightly lighter shade */
+}
+
+.email-img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* About Me Section */
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 2em 0;
+    background-color: #232429;
+    /* Match the overall theme */
+}
+
+.about-me-container {
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75%;
+}
+
+.about-me {
+    color: #d3d3d3;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+.section-title {
+    color: #E1DED9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    text-align: left;
+    letter-spacing: 0.14em;
+    padding-top: 0.8em;
+}
+
+.award-title {
+    color: #E1DED9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    text-align: left;
+    letter-spacing: 0.14em;
+    padding: 0.8em 0;
+}
+
+.padding {
+    height: 3em;
+}
+
+.award-description {
+    line-height: 1.3em;
+}
+
+.about-me .section-body {
+    font-size: 1rem;
+    margin: 0.5em 0;
+    color: #d3d3d3;
+}
+
+.about-me .highlight {
+    color: #D09AB0;
+    /* Light pink color */
+    font-weight: bold;
+}
+
+.about-me-photo {
+    height: 450px;
+    width: 400px;
+    border-top-left-radius: 450px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 450px;
+    border-bottom-right-radius: 0px;
+    background-color: #4D5389;
+    object-fit: cover;
+    margin: 0;
+    object-position: right;
+    overflow: hidden;
+}
+
+
+.overlay-box {
+    position: absolute;
+    color: #392a47;
+    ;
+    padding: 45px;
+    width: 500px;
+    top: 59%;
+    left: 16%;
+    transform: translate(-36%, -50%);
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background-color: white;
+    font-size: 1.5em;
+    padding-left: 100px;
+    text-align: left;
+    /* Align text to the left */
+}
+
+@media (max-width: 768px) {
+    .overlay-box {
+        width: 80%;
+        padding: 30px;
+        font-size: 1.2em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 20px;
+        top: 65%;
+        /* Adjusted to avoid overlapping with title */
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-box {
+        width: 90%;
+        padding: 20px;
+        font-size: 1em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 10px;
+        top: 70%;
+        /* Further adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-box {
+        width: 90%;
+        padding: 20px;
+        font-size: 1em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 10px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(57, 42, 71, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
